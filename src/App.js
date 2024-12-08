@@ -46,7 +46,6 @@ function App() {
             }
           );
 
-          console.log(response.data, "user");
           setUser(response.data);
         } catch (error) {
           console.error("Error fetching User", error);
@@ -57,7 +56,6 @@ function App() {
     fetchUser();
   }, [isAuthenticated]);
 
-  console.log(user, "user");
   return (
     <Router>
       {isAuthenticated && (
