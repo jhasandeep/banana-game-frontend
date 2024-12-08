@@ -18,7 +18,6 @@ function Admin() {
 
   useEffect(() => {
     socket.on("updateOnlinePlayers", (onlineUserIds) => {
-      console.log("onlineUserIds", onlineUserIds);
       setOnlineUsers(onlineUserIds);
     });
     return () => {

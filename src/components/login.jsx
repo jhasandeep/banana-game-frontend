@@ -24,7 +24,7 @@ function Login({ setIsAuthenticated, user }) {
 
       socket.emit("playerConnected", user._id);
       setIsAuthenticated(true);
-      console.log(user.role, "user role");
+
       if (user.role === "admin") {
         navigate("/admin");
       } else {
